@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cursos</title>
+
+		<!-- Bootstrap CSS & JS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+			integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+			integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- Custom CSS & JS-->
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='style.css') }}"
+		/>
+
+		<!-- <script>
+			document.addEventListener("DOMContentLoaded", function () {
+				if (typeof auth !== "undefined" && auth === true) {
+					document.body.style.display = "block";
+				} else {
+					// Or display an error message:
+					//document.body.innerHTML = "<h1>Not authorized.</h1>";
+					alert("Not authorized");
+				}
+			});
+			console.log(auth);
+		</script> -->
+	</head>
+
+	<body>
+		<div style="text-align: center">
+			<h1><b>CURSOS</b></h1>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<button onclick="redirectToPage()" class="course-container">
+						<img
+							src="{{ url_for('static', filename='assets/fullstack.png') }}"
+							class="img-fluid course-image"
+							alt="Formação em Fullstack"
+						/>
+						<h3 style="margin: 0 0 0px">Fullstack</h3>
+					</button>
+				</div>
+
+				<div class="col-md-6">
+					<button onclick="redirectToPage()" class="course-container">
+						<img
+							src="{{ url_for('static', filename='assets/html5.png') }}"
+							class="img-fluid course-image"
+							alt="HTML Avançado"
+						/>
+						<h3 style="margin: 0 0 0px">HTML Avançado</h3>
+					</button>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<button onclick="redirectToPage()" class="course-container">
+						<img
+							src="{{ url_for('static', filename='assets/css3.png') }}"
+							class="img-fluid course-image"
+							alt="CSS Avançado"
+						/>
+						<h3 style="margin: 0 0 0px">CSS Avançado</h3>
+					</button>
+				</div>
+			</div>
+		</div>
+		<script src="{{ url_for('static', filename='script.js') }}"></script>
+	</body>
+</html>
